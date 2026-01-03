@@ -138,6 +138,8 @@ return [
     'website_url' => 'Website Url',
     'check_office_off_days' => 'Check Office Off Days',
     'upload_logo' => 'Upload Logo',
+    'login_page_logo' => 'Login Page Logo',
+    'sidebar_branding_logo' => 'Sidebar Branding Logo',
     'update' => 'Update',
     'save' => 'Save',
 

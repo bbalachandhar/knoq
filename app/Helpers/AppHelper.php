@@ -135,8 +135,24 @@ class AppHelper
 
     public static function getCompanyLogo()
     {
-        $company = Company::select('logo')->first();
-        return optional($company)->logo;
+        try {
+            $companyId = self::getAuthUserCompanyId();
+            $company = Company::select('logo')->where('id', $companyId)->first();
+            return optional($company)->logo;
+        } catch (Exception $e) {
+            return 'placeholder_logo.svg';
+        }
+    }
+
+    public static function getCompanySidebarLogo()
+    {
+        try {
+            $companyId = self::getAuthUserCompanyId();
+            $company = Company::select('sidebar_logo')->where('id', $companyId)->first();
+            return optional($company)->sidebar_logo;
+        } catch (Exception $e) {
+            return 'placeholder_logo.svg';
+        }
     }
 
     /**

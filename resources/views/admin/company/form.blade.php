@@ -54,10 +54,20 @@
     {{--    </div>--}}
 
     <div class="col-lg-6 mb-4">
-        <label for="upload" class="form-label">{{ __('index.upload_logo') }}</label>
+        <label for="upload" class="form-label">{{ __('index.login_page_logo') }}</label>
         <input class="form-control" type="file" id="upload" name="logo" >
         @if(($companyDetail && $companyDetail->logo))
             <img  src="{{asset(\App\Models\Company::UPLOAD_PATH.$companyDetail->logo)}}"
+                  alt=""  style="object-fit: contain" class="mt-3 ht-150 wd-150"
+            >
+        @endif
+    </div>
+
+    <div class="col-lg-6 mb-4">
+        <label for="upload" class="form-label">{{ __('index.sidebar_branding_logo') }}</label>
+        <input class="form-control" type="file" id="upload" name="sidebar_logo" >
+        @if(($companyDetail && $companyDetail->sidebar_logo))
+            <img  src="{{asset(\App\Models\Company::UPLOAD_PATH.$companyDetail->sidebar_logo)}}"
                   alt=""  style="object-fit: contain" class="mt-3 ht-150 wd-150"
             >
         @endif

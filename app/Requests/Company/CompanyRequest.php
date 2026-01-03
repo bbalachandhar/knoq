@@ -36,9 +36,11 @@ class CompanyRequest extends FormRequest
         ];
         if ($this->isMethod('put')) {
             $rules['logo'] = ['sometimes','file', 'mimes:jpeg,png,jpg,gif,svg','max:5048'];
+            $rules['sidebar_logo'] = ['sometimes','file', 'mimes:jpeg,png,jpg,gif,svg','max:5048'];
             $rules['email'] = ['required','email',Rule::unique('users')->ignore($this->id)];
         } else {
             $rules['logo'] = ['required','file', 'mimes:jpeg,png,jpg,gif,svg','max:5048'];
+            $rules['sidebar_logo'] = ['sometimes','file', 'mimes:jpeg,png,jpg,gif,svg','max:5048'];
             $rules['email'] = [ 'required','email','unique:users,email' ];
         }
         return $rules;

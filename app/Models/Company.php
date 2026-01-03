@@ -24,6 +24,7 @@ class Company extends Model
         'is_active',
         'website_url',
         'logo',
+        'sidebar_logo',
         'weekend',
         'created_by',
         'updated_by'

@@ -19,6 +19,7 @@ class CompanySeeder extends Seeder
                 'owner_name' => "b.balachandhar",
                 'address' => "london",
                 'logo' => "placeholder_logo.svg",
+                'sidebar_logo' => "placeholder_sidebar_logo.svg",
             ]
         );
     }
